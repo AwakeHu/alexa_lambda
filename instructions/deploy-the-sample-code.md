@@ -13,7 +13,7 @@ If you encounter any issues, refer to the [AWS Documentation for Creating a Depl
 ## Upload the Sample Code
 
 1. Navigate to https://us-east-1.console.aws.amazon.com/lambda/home?region=us-east-1#/functions/skill-sample-java-smarthome-switch?tab=graph and locate the *Function code* section.
-2. In the _Handler_ section, replace the default handler text 'example.Hello::myHandler' with `AlexaHandler::handler`.
+2. In the _Handler_ section, replace the default handler text 'example.Hello::myHandler' with `sifely.AlexaHandler::handler`.
 2. In the _Code entry type_ dropdown, select **Upload a .ZIP or JAR file**.
 3. Click the **Upload** button and browser to the `working-smarthome` directory or where you zipped the packaged code.
 4. Select the `skill-sample-java-smarthome-switch-1.0.jar` file in the *skill-sample-java-smarthome-switch/target* directory to upload as the lambda function code.
