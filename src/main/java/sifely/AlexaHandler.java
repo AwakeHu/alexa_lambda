@@ -34,7 +34,7 @@ public class AlexaHandler implements RequestStreamHandler {
 
             Map <String,String> headers = new HashMap<>();
             headers.put("Content-Type", "application/json");
-            Map<String, String> apiResponse = OkHttpPostClient.postJsonHttp("https://dev-app.sifely.com:8090/smart/home/execute", JSONUtil.toJsonStr(param), headers);
+            Map<String, String> apiResponse = OkHttpPostClient.postJsonHttp("http://dev-app-server.sifely.com:8090/smart/home/execute", JSONUtil.toJsonStr(param), headers);
             System.out.println("Response:" + apiResponse);
             if(new Integer(apiResponse.get("statusCode")) >= 200 && new Integer(apiResponse.get("statusCode")) <= 300){
                 String responseContent = apiResponse.get("responseContent");
