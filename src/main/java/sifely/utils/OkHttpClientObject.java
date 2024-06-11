@@ -1,4 +1,4 @@
-package sifely;
+package sifely.utils;
 
 import okhttp3.ConnectionPool;
 import okhttp3.OkHttpClient;

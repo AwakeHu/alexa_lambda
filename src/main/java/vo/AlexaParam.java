@@ -1,4 +1,4 @@
-package sifely;
+package vo;
 
 
 public class AlexaParam {

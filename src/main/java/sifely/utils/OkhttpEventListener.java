@@ -1,4 +1,4 @@
-package sifely;
+package sifely.utils;
 
 import okhttp3.*;
 import org.apache.commons.lang3.StringUtils;

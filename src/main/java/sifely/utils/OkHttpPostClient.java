@@ -1,4 +1,4 @@
-package sifely;
+package sifely.utils;
 
 import okhttp3.Headers;
 import okhttp3.MediaType;

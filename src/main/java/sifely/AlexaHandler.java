@@ -9,17 +9,12 @@ import java.util.Iterator;
 import java.util.Map;
 import java.util.Scanner;
 
-import cn.hutool.http.HttpRequest;
-import cn.hutool.http.HttpResponse;
-import cn.hutool.http.HttpUtil;
-import cn.hutool.http.Method;
-import cn.hutool.json.JSONObject;
 import cn.hutool.json.JSONUtil;
 import com.amazonaws.services.lambda.runtime.Context;
-import com.amazonaws.services.lambda.runtime.RequestHandler;
 import com.amazonaws.services.lambda.runtime.RequestStreamHandler;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import sifely.utils.OkHttpPostClient;
 
 public class AlexaHandler implements RequestStreamHandler {
     @Override
@@ -35,7 +30,7 @@ public class AlexaHandler implements RequestStreamHandler {
             headers.put("Content-Type", "application/json");
             // 获取 token 的值
             headers.put("Authorization", findTokenValue(request));
-            String url = System.getenv("DOMAIN_URL");
+            String url = System.getenv("DOMAIN_URL")+"/smart/home/execute";
             System.out.println("url:"+url);
             System.out.println("param:"+request);
             System.out.println("headers:"+JSONUtil.toJsonStr(headers));
